@@ -55,6 +55,9 @@
             <div class=row>
             <img src="" alt="birthday Message">
             </div>
+            <div class=row id=canvasDiv>
+
+            </div>
         </header>
     </div>
 
@@ -85,8 +88,7 @@
         var renderer = new THREE.WebGLRenderer({antialias:true});
         renderer.setSize(WIDTH, HEIGHT);
         renderer.setClearColor(0xDDDDDD, 1);
-        document.body.appendChild(renderer.domElement);
-
+        document.getElementById("canvasDiv").appendChild(renderer.domElement);
         var scene = new THREE.Scene();
 
         var camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
