@@ -3,7 +3,7 @@
 <head>
     <title>Happy Birthday</title>
 	<style>
-		canvas { width: 90vw; height: 100%; }
+		canvas { width: 30vw; height: 30vh; }
 	</style>
     <link rel="stylesheet" href="./styles.css">
     <script src="./node_modules/three/build/three.min.js"></script>
@@ -47,8 +47,7 @@
             <h2>\(^.^)/<br><br></h2>
             <h2></h2>
             <audio controls>
-                <source src="horse.ogg" type="audio/ogg">
-                <source src="horse.mp3" type="audio/mpeg">
+                <source src="./model/mananitas.mp3" type="audio/mp3">
               Your browser does not support the audio element.
               </audio>
         </header>
@@ -73,8 +72,8 @@
   </script>
   <script type="module">
       import { GUI } from "./node_modules/three/examples/jsm/libs/dat.gui.module.js";
-        var WIDTH = window.innerWidth;
-        var HEIGHT = window.innerHeight;
+        var WIDTH = window.innerWidth/2;
+        var HEIGHT = window.innerHeight/2;
 
         var renderer = new THREE.WebGLRenderer({antialias:true});
         renderer.setSize(WIDTH, HEIGHT);
@@ -84,7 +83,8 @@
         var scene = new THREE.Scene();
 
         var camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
-        camera.position.z = 100;
+        camera.position.z = 5;
+        camera.position.y = 3;
         scene.add(camera);
 
         var controls = new THREE.OrbitControls( camera, renderer.domElement );
@@ -195,7 +195,6 @@
             this.Light2_Color =  0xf2ebc7;
         }
         gui.add(controls, 'Rotation_Speed', 0, 0.1);
-        gui.open();
 
         window.addEventListener( 'resize', onWindowResize );
         var t = 0;
@@ -232,8 +231,8 @@
             return lines;
         }
         function frameArea(sizeToFitOnScreen, boxSize, boxCenter, camera) {
-            const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.5;
-            const halfFovY = THREE.MathUtils.degToRad(camera.fov * .5);
+            const halfSizeToFitOnScreen = sizeToFitOnScreen * 5;
+            const halfFovY = THREE.MathUtils.degToRad(camera.fov * 2);
             const distance = halfSizeToFitOnScreen / Math.tan(halfFovY);
             // compute a unit vector that points in the direction the camera is now
             // in the xz plane from the center of the box

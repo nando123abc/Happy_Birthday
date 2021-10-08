@@ -5,29 +5,11 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: #141E30;
-    background: linear-gradient(to right, #FFC300, #ffbe33, #ffa000   ); }
-
-table {
-    z-index: 1000;
-  font-family: helvetica;
-  border-collapse: collapse;
-  width: 80vw;
+    background: linear-gradient(to right, #FFC300, #ffbe33, #ffa000   ); 
 }
 
-td, th {
-  border: 1px solid #000;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #F7971E;
-}
-
-tr:nth-child(odd) {
-  background-color:   #ffc301;
-}
 h1 {
+    position: absolute;
     width:100%;
     text-align: center;
     text-transform: Uppercase;
