@@ -53,7 +53,7 @@
                   </audio>
             </div>
             <div class=row>
-            <img src="" alt="birthday Message">
+            <!-- <img src="" alt="birthday Message"> -->
             </div>
             <div class=row id=canvasDiv>
 
@@ -85,14 +85,15 @@
         var WIDTH = window.innerWidth/2;
         var HEIGHT = window.innerHeight/2;
 
-        var renderer = new THREE.WebGLRenderer({antialias:true});
+        var renderer = new THREE.WebGLRenderer({antialias:true, alpha:true});
         renderer.setSize(WIDTH, HEIGHT);
-        renderer.setClearColor(0xDDDDDD, 1);
+        // renderer.setClearColor(0xDDDDDD, 1);
+        renderer.setClearColor( 0x000000, 0 ); 
         document.getElementById("canvasDiv").appendChild(renderer.domElement);
         var scene = new THREE.Scene();
 
         var camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
-        camera.position.z = 5;
+        camera.position.z = 4;
         camera.position.y = 3;
         scene.add(camera);
 
@@ -164,8 +165,8 @@
         const pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
         scene.add( pointLightHelper, pointLightHelper2);
 
-        //Default Start Background
-        scene.background = new THREE.Color( 0xffc725 );
+        // //Default Start Background
+        scene.background =  null;
         const params = {
             //Choice one (Cubed Texture)
             Cube: function () {
@@ -191,19 +192,19 @@
         };
 
         //Create Simple GUI
-        const gui = new GUI();
-        const backgroundFolder = gui.addFolder('Background')
-        backgroundFolder.add( params,'Cube');
-        backgroundFolder.add( params,'Equirectangular');
-        backgroundFolder.add( params,'Solid');
-        var controls = new function() {
-            this.Rotation_Speed = 0.01;
-            this.Light1_Position = -10;
-            this.Light1_Color =  0xf2ebc7;
-            this.Light2_Position = 10;
-            this.Light2_Color =  0xf2ebc7;
-        }
-        gui.add(controls, 'Rotation_Speed', 0, 0.1);
+        // const gui = new GUI();
+        // const backgroundFolder = gui.addFolder('Background')
+        // backgroundFolder.add( params,'Cube');
+        // backgroundFolder.add( params,'Equirectangular');
+        // backgroundFolder.add( params,'Solid');
+        // var controls = new function() {
+        //     this.Rotation_Speed = 0.01;
+        //     this.Light1_Position = -10;
+        //     this.Light1_Color =  0xf2ebc7;
+        //     this.Light2_Position = 10;
+        //     this.Light2_Color =  0xf2ebc7;
+        // }
+        // gui.add(controls, 'Rotation_Speed', 0, 0.1);
 
         window.addEventListener( 'resize', onWindowResize );
         var t = 0;
