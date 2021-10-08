@@ -5,7 +5,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: #141E30;
-    background: linear-gradient(to right, #FFC300, #ffbe33, #ffa000   ); 
+    background: linear-gradient(to right, #d3d1cb, #b8b6b4, #dad7d2   ); 
 }
 
 h1 {
@@ -50,7 +50,7 @@ h2 {
     margin-top: -1.15em;
     font-family: monospace;
     font-size: 3rem;
-    color: #F7971E;
+    color: #3b5396;
     text-align: center;
 }
 
