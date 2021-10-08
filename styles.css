@@ -40,6 +40,7 @@ h1 {
 h1 {
     position: relative;
     background: linear-gradient(to right,#85929E , #3b5396 , #2E4053);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
