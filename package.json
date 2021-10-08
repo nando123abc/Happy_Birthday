@@ -1,0 +1,33 @@
+{
+  "name": "happy_birthday",
+  "version": "1.0.0",
+  "description": "Birthday message for special someones",
+  "main": "index.html",
+  "dependencies": {
+    "http-server": "^13.0.2",
+    "three": "^0.133.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nando123abc/Happy_Birthday.git"
+  },
+  "keywords": [
+    "happy",
+    "birthday",
+    "happy",
+    "birthday",
+    "suprise",
+    "celebration",
+    "fun"
+  ],
+  "author": "Fernando Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nando123abc/Happy_Birthday/issues"
+  },
+  "homepage": "https://github.com/nando123abc/Happy_Birthday#readme"
+}
