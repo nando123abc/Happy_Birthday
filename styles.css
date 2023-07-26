@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
-
+@media only screen and (max-width: 800px) {
+  .audioBtn{
+    width:100px !important;
+  }
+}
 body {
     display: flex;
     justify-content: center;
